@@ -3,7 +3,7 @@ import { format, formatDistanceToNow, parseISO, isPast } from 'date-fns';
 export function formatTime(dateString) {
   if (!dateString) return '';
   try {
-    return format(parseISO(dateString), 'hh:mm a');
+    return format(parseISO(dateString), 'MMMM d, yyyy @ hh:mm a');
   } catch {
     return '';
   }

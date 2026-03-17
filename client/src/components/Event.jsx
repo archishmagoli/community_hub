@@ -43,8 +43,12 @@ const Event = (props) => {
             <div className='event-information-overlay'>
                 <div className='text'>
                     <h3>{event.title}</h3>
-                    <p><i className="fa-regular fa-calendar fa-bounce"></i> {event.date} <br /> {time}</p>
-                    <p id={`remaining-${event.id}`}>{remaining}</p>
+                    <p><i className="fa-regular fa-calendar fa-bounce"></i> {time}</p>
+                    {remaining === 'Event has passed' ? (
+                        <p id={`remaining-${event.id}`} className="negative-time-remaining">{remaining}</p>
+                    ) : (
+                        <p id={`remaining-${event.id}`}>{remaining}</p>
+                    )}
                 </div>
             </div>
         </article>
