@@ -33,8 +33,7 @@ The following **optional** features are implemented:
 Here's a walkthrough of implemented required features: [YouTube Link](https://youtu.be/wEO_i6Tos-4)
 
 ## Notes
-
-Describe any challenges encountered while building the app or any additional context you'd like to add.
+I didn't get the chance to deploy the frontend for this project, but overall I learned a lot about putting a simple full-stack project together.
 
 ## License
 
