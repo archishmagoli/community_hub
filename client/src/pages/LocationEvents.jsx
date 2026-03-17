@@ -9,12 +9,12 @@ const LocationEvents = ({index}) => {
     const [events, setEvents] = useState([])
 
     useEffect(() => {
-        const fetchData = async (index) => {
+        const fetchData = async () => {
             const locationData = await LocationsAPI.getLocationById(index);
             setLocation(locationData);
-
+            
             const eventsData = await EventsAPI.getAllEvents();
-            const filteredEvents = eventsData.filter(event => event.locationId === index);
+            const filteredEvents = eventsData.filter(event => event.locationid === index);
             setEvents(filteredEvents);
         };
 
