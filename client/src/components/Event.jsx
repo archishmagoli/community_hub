@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import '../css/Event.css'
+import EventsAPI from '../services/EventsAPI';
+import * as dates from '../utils/dates';
 
 const Event = (props) => {
 
@@ -10,7 +12,7 @@ const Event = (props) => {
     useEffect(() => {
         (async () => {
             try {
-                const eventData = await EventsAPI.getEventsById(props.id)
+                const eventData = await EventsAPI.getEventById(props.id)
                 setEvent(eventData)
             }
             catch (error) {
@@ -20,34 +22,24 @@ const Event = (props) => {
     }, [])
 
     useEffect(() => {
-        (async () => {
-            try {
-                const result = await dates.formatTime(event.time)
-                setTime(result)
-            }
-            catch (error) {
-                throw error
-            }
-        }) ()
+        try {
+            setTime(dates.formatTime(event.time));
+            setRemaining(dates.formatRemainingTime(event.time));
+        } catch (error) {
+            throw error
+        }
     }, [event])
 
-    useEffect(() => {
-        (async () => {
-            try {
-                const timeRemaining = await dates.formatRemainingTime(event.remaining)
-                setRemaining(timeRemaining)
-                dates.formatNegativeTimeRemaining(remaining, event.id)
-            }
-            catch (error) {
-                throw error
-            }
-        }) ()
-    }, [event])
+    const backgroundStyle = {
+        backgroundImage: `url(${event.image})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
+    };
 
     return (
-        <article className='event-information'>
-            <img src={event.image} />
-
+        /* Remove the <img> tag and apply the style here */
+        <article className='event-information' style={backgroundStyle}>
             <div className='event-information-overlay'>
                 <div className='text'>
                     <h3>{event.title}</h3>

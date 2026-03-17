@@ -1,6 +1,7 @@
-import { pool } from "./database.js";
-import '../dotenv.js';
+import dotenv from 'dotenv';
+dotenv.config({ path: '../.env' })
 
+import { pool } from "./database.js";
 import eventsData from "../data/events.js";
 import locationsData from "../data/locations.js";
 
@@ -25,7 +26,7 @@ const createTablesQuery = `
         title VARCHAR(255) NOT NULL,
         image VARCHAR(255) NOT NULL,
         date VARCHAR(255) NOT NULL,
-        time VARCHAR(255) NOT NULL,
+        time TIMESTAMP NOT NULL,
         locationId INTEGER REFERENCES locations(id) ON DELETE CASCADE
     );
 `;

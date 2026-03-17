@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import EventsAPI from '../services/EventsAPI';
+import Event from '../components/Event';
+import '../css/Events.css';
 
 const Events = () => {
   const [events, setEvents] = useState([]);
@@ -19,15 +21,11 @@ const Events = () => {
   return (
     <div className="events-page">
       <h2>All Events</h2>
-      <ul>
+      <div className="event-list">
         {events.map(event => (
-          <li key={event.id}>
-            <h3>{event.title}</h3>
-            <p>{event.description}</p>
-            <p><strong>Date:</strong> {event.date} <strong>Time:</strong> {event.time}</p>
-          </li>
+          <Event key={event.id} id={event.id} />
         ))}
-      </ul>
+      </div>
     </div>
   );
 };
