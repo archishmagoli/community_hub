@@ -12,3 +12,9 @@
   margin: calc(-2 * (100vw - 100%) / 2);
   padding: 2rem;
 }
+
+#location-filter-div { 
+    width: '100%';
+    margin-bottom: '2rem';
+    text-align: 'center' 
+}

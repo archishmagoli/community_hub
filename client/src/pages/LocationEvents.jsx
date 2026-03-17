@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom';
 import Event from '../components/Event'
 import '../css/LocationEvents.css'
 import LocationsAPI from '../services/LocationsAPI'
 import EventsAPI from '../services/EventsAPI'
 
 const LocationEvents = ({index}) => {
+    const navigate = useNavigate();
     const [location, setLocation] = useState([])
     const [events, setEvents] = useState([])
 
@@ -23,6 +25,12 @@ const LocationEvents = ({index}) => {
 
     return (
         <div className='location-events'>
+            <button
+                id="back-button"
+                onClick={() => navigate('/events')}
+            >
+                &larr; Back to All Events
+            </button>
             <header>
                 <div className='location-image'>
                     <img src={location.image} />

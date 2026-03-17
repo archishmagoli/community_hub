@@ -10,7 +10,7 @@
     background-color: var(--secondary-color);
     font-family: Nunito Sans, Verdana, sans-serif;
     height: 100vh;
-    --main-color: rgb(217, 29, 242);
+    --main-color: rgb(136, 4, 132);
     --secondary-color: rgb(3, 1, 64);
     --primary: var(--main-color);
     --primary-hover: rgb(111, 28, 166);
@@ -45,6 +45,9 @@
 #root h2 {
     font-family: Nunito Sans, Verdana, sans-serif;
     font-size: 2em;
+    border: 2px solid white;
+    background-color: var(--main-color);
+    border-radius: 100px;
     font-weight: 800;
 }
 

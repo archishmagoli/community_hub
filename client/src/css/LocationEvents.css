@@ -37,3 +37,23 @@
 .location-events main i {
     margin-right: 10px;
 }
+
+#back-button { 
+    width: fit-content;
+    display: inline-block;
+    margin: 1rem;
+    padding: '0.5rem 1.5rem';
+    border-radius: '1rem';
+    border: '1px solid #ccc'; 
+    cursor: 'pointer' 
+}
+
+#location-filter-text {
+    margin-right: 1rem;
+    border: 2px solid white;
+    padding: 0.5rem;
+    border-radius: 100px;
+    width: fit-content;
+    background-color: var(--main-color);
+    align-items: center;
+}
