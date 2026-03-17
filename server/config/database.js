@@ -1,4 +1,4 @@
-import pg from 'pg'
+import pg from 'pg';
 
 const config = {
     user: process.env.PGUSER,
@@ -7,8 +7,8 @@ const config = {
     port: process.env.PGPORT,
     database: process.env.PGDATABASE,
     ssl: {
-      rejectUnauthorized: false
+        rejectUnauthorized: false
     }
 }
 
-export const pool = new pg.Pool(config)
+export const pool = new pg.Pool(config);
