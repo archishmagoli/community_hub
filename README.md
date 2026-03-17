@@ -1,10 +1,10 @@
-# WEB103 Project 3 - *Name of App Here*
+# WEB103 Project 3 - *Community Hub*
 
-Submitted by: **Your name here**
+Submitted by: **Archie Goli**
 
-About this web app: **App description here**
+About this web app: **Explore upcoming events at UnityGrid Plaza.**
 
-Time spent: **X** hours
+Time spent: **5** hours
 
 ## Required Features
 
@@ -27,20 +27,10 @@ The following **optional** features are implemented:
 - [x] An additional page shows all possible events
   - [ ] Users can sort *or* filter events by location.
 - [x] Events display a countdown showing the time remaining before that event
-  - [ ] Events appear with different formatting when the event has passed (ex. negative time, indication the event has passed, crossed out, etc.).
+  - [x] Events appear with different formatting when the event has passed (ex. negative time, indication the event has passed, crossed out, etc.).
 
 ## Video Walkthrough
-
-Here's a walkthrough of implemented required features:
-
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
-
-<!-- Replace this with whatever GIF tool you used! -->
-GIF created with ...  GIF tool here
-<!-- Recommended tools:
-[Kap](https://getkap.co/) for macOS
-[ScreenToGif](https://www.screentogif.com/) for Windows
-[peek](https://github.com/phw/peek) for Linux. -->
+Here's a walkthrough of implemented required features: [YouTube Link](https://youtu.be/wEO_i6Tos-4)
 
 ## Notes
 

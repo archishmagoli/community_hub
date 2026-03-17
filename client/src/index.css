@@ -45,9 +45,7 @@
 #root h2 {
     font-family: Nunito Sans, Verdana, sans-serif;
     font-size: 2em;
-    border: 2px solid white;
     background-color: var(--main-color);
-    border-radius: 100px;
     font-weight: 800;
 }
 
